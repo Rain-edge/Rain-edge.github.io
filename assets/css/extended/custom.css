@@ -582,6 +582,46 @@ a {
 }
 
 /* ============================================================
+   首页 GitHub 区块（复用卡片语言：细边框、12px 圆角）
+   ============================================================ */
+
+.home-github {
+    margin: 0 0 16px;
+    padding: 16px 20px 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--entry);
+}
+
+.home-github-title {
+    font-size: 15px;
+    font-weight: 650;
+    letter-spacing: -0.1px;
+    margin: 0 0 12px;
+    color: var(--primary);
+}
+
+.home-github-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.home-github-badges img {
+    height: 20px;
+    width: auto;
+    display: block;
+}
+
+.home-github-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+/* ============================================================
    页面标题区域：紧贴顶部导航（与右上角菜单视觉一体）
    ============================================================ */
 
