@@ -60,3 +60,9 @@
 - 图片放 `static/moments/`，front matter 只写文件名：`images = ['xxx.jpg']`
 - 正文一句话到几行均可，Markdown 语法正常支持
 - 列表页自动全显内容 + 图片，无需额外操作
+
+## 八、Projects 发布规范
+
+- 文件放 `content/projects/<名>.md`，封面/截图放 `static/projects/`，front matter 引用文件名
+- 字段：`title`、`description`、`date`（排序用）、`cover`、`screenshots`（数组）、`stack`（数组）、`status`、`started`、`github`、`demo`（可选，无则不放按钮）、`background`/`why`/`features`/`process`/`challenges`/`problems`/`future`（可选，缺省章节自动隐藏）
+- 新增项目 = 新增一个 md + 拖图，模板自动生成卡片和详情页

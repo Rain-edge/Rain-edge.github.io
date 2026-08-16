@@ -314,6 +314,167 @@ a {
 }
 
 /* ============================================================
+   Projects 项目展示（复用卡片语言：12px 圆角、细边框、无阴影）
+   ============================================================ */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+}
+
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--entry);
+    transition: border-color 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: #d8dde0;
+}
+
+.project-card-link {
+    color: inherit;
+    box-shadow: none;
+    display: block;
+}
+
+.project-card-cover {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--border);
+}
+
+.project-card-body {
+    padding: 16px 18px 18px;
+}
+
+.project-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.project-card-title {
+    font-size: 18px;
+    font-weight: 650;
+    margin: 0;
+    letter-spacing: -0.2px;
+}
+
+.project-status {
+    flex-shrink: 0;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 9999px;
+    border: 1px solid var(--border);
+    color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.project-card-desc {
+    font-size: 13.5px;
+    color: var(--secondary);
+    line-height: 1.6;
+    margin: 8px 0 0;
+}
+
+.project-card-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.project-card-tag {
+    font-size: 12px;
+    color: var(--secondary);
+    background: var(--code-bg);
+    border-radius: 6px;
+    padding: 2px 8px;
+}
+
+/* 详情页 */
+.project-cover {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-top: 4px;
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.project-time {
+    font-size: 13px;
+    color: var(--secondary);
+}
+
+.project-desc {
+    font-size: 15px;
+    color: var(--content);
+    line-height: 1.7;
+    margin-top: 12px;
+}
+
+.project-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.project-stack-item {
+    font-size: 13px;
+    color: var(--secondary);
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    padding: 3px 12px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.project-stack-item:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.project-shots {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.project-shots img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+/* ============================================================
    页面标题区域：紧贴顶部导航（与右上角菜单视觉一体）
    ============================================================ */
 

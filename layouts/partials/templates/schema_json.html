@@ -73,13 +73,16 @@
   "articleBody": {{ .Content | safeJS | htmlUnescape | plainify }},
   "wordCount" : "{{ .WordCount }}",
   "inLanguage": {{ .Language.Lang | default "en-us" }},
-  {{ if .Params.cover.image -}}
+  {{- $cover := .Params.cover -}}
+  {{ if reflect.IsMap $cover -}}
   "image":
-    {{- if (ne .Params.cover.relative true) -}}
-    {{ .Params.cover.image | absURL }},
+    {{- if (ne $cover.relative true) -}}
+    {{ $cover.image | absURL }},
     {{- else -}}
-    {{ (path.Join .RelPermalink .Params.cover.image ) | absURL }},
+    {{ (path.Join .RelPermalink $cover.image ) | absURL }},
     {{- end}}
+  {{- else if $cover }}
+  "image": {{ printf "/projects/%s" $cover | absURL }},
   {{- else }}
     {{- $images := partial "templates/_funcs/get-page-images" . -}}
     {{- with index $images 0 -}}

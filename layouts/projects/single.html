@@ -1,0 +1,86 @@
+{{- define "main" }}
+<article class="project-single">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  {{- with .Params.cover }}
+  <img class="project-cover" src="{{ printf "/projects/%s" . | relURL }}" alt="" loading="lazy" />
+  {{- end }}
+
+  <div class="project-meta">
+    {{- with .Params.status }}
+    <span class="project-status">{{ . }}</span>
+    {{- end }}
+    {{- with .Params.started }}
+    <span class="project-time">{{ . }} 至今</span>
+    {{- end }}
+  </div>
+
+  {{- with .Description }}
+  <p class="project-desc">{{ . }}</p>
+  {{- end }}
+
+  <div class="project-links">
+    {{- with .Params.github }}
+    <a href="{{ . }}" class="home-btn" target="_blank" rel="noopener">GitHub</a>
+    {{- end }}
+    {{- with .Params.demo }}
+    <a href="{{ . }}" class="home-btn" target="_blank" rel="noopener">Live Demo</a>
+    {{- end }}
+  </div>
+
+  {{- with .Params.stack }}
+  <div class="project-stack">
+    {{- range . }}
+    <span class="project-stack-item">{{ . }}</span>
+    {{- end }}
+  </div>
+  {{- end }}
+
+  <div class="post-content">
+    {{- with .Params.background }}
+    <h2>项目背景</h2>
+    <p>{{ . }}</p>
+    {{- end }}
+    {{- with .Params.why }}
+    <h2>为什么做</h2>
+    <p>{{ . }}</p>
+    {{- end }}
+    {{- with .Params.features }}
+    <h2>功能</h2>
+    <ul>
+      {{- range . }}
+      <li>{{ . }}</li>
+      {{- end }}
+    </ul>
+    {{- end }}
+    {{- with .Params.process }}
+    <h2>开发过程</h2>
+    <p>{{ . }}</p>
+    {{- end }}
+    {{- with .Params.challenges }}
+    <h2>技术难点</h2>
+    <p>{{ . }}</p>
+    {{- end }}
+    {{- with .Params.problems }}
+    <h2>遇到的问题</h2>
+    <p>{{ . }}</p>
+    {{- end }}
+    {{- with .Params.future }}
+    <h2>Future Plans</h2>
+    <p>{{ . }}</p>
+    {{- end }}
+
+    {{ .Content }}
+  </div>
+
+  {{- with .Params.screenshots }}
+  <div class="project-shots">
+    {{- range . }}
+    <img src="{{ printf "/projects/%s" . | relURL }}" alt="" loading="lazy" />
+    {{- end }}
+  </div>
+  {{- end }}
+</article>
+{{- end }}

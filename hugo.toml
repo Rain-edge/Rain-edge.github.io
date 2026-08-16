@@ -53,10 +53,15 @@ hasCJKLanguage = true
   url = '/thoughts/'
   weight = 19
 [[menu.main]]
+  identifier = 'projects'
+  name = '项目'
+  url = '/projects/'
+  weight = 20
+[[menu.main]]
   identifier = 'tags'
   name = '标签'
   url = '/tags/'
-  weight = 20
+  weight = 22
 [[menu.main]]
   identifier = 'archives'
   name = '归档'
@@ -75,6 +80,7 @@ hasCJKLanguage = true
 
 [params]
   author = 'Rain-edge'
+  mainSections = ['posts']
   description = '云计算 · DevOps · SRE · 日常'
   ShowReadingTime = true
   ShowWordCount = true
