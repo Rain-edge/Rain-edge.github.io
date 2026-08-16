@@ -43,7 +43,7 @@ body {
 .logo a .tc {
     display: inline-block;
     opacity: 0;
-    animation: char-pop-once 0.9s ease backwards;
+    animation: char-pop-once 0.9s ease both;
 }
 
 /* 已播放过动画后：直接静态显示彩色文字 */
