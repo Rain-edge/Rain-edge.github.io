@@ -11,6 +11,10 @@ theme = 'PaperMod'
 enableRobotsTXT = true
 hasCJKLanguage = true
 
+# 允许模板读取 GISCUS_ 前缀环境变量（评论系统 ID 由 CI 注入）
+[security.funcs]
+  getenv = ['^HUGO_', '^GISCUS_']
+
 # Hugo 0.160 默认 home 输出不含 robots/json，显式声明
 # json = 站内搜索索引（Fuse.js）
 [outputs]
@@ -108,10 +112,11 @@ hasCJKLanguage = true
   shouldSort = true
   keys = ["title", "content"]
 
-# 评论区（Giscus）：默认关闭。在 giscus.app 配置后填入 repo-id 等并设 enabled = true
+# 评论区（Giscus）：默认关闭
+# 启用步骤：① 仓库 Settings 开启 Discussions ② giscus.app 生成配置
+# ③ 仓库 Settings → Secrets 添加 GISCUS_REPO_ID / GISCUS_CATEGORY_ID
+# ④ enabled = true。ID 不写入仓库文件，由 CI 环境变量注入
 [params.giscus]
   enabled = false
   repo = "Rain-edge/rain-edge.github.io"
-  repoId = ""
   category = "General"
-  categoryId = ""

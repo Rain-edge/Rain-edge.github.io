@@ -1,10 +1,15 @@
-{{- if site.Params.giscus.enabled }}
+{{- /* Giscus 评论：仅正式文章板块，ID 从 CI 环境变量注入（不写入仓库文件） */}}
+{{- $allowed := slice "posts" "tech" "notes" "life" "thoughts" }}
+{{- if and site.Params.giscus.enabled (in $allowed .Section) }}
+{{- $repoId := os.Getenv "GISCUS_REPO_ID" }}
+{{- $categoryId := os.Getenv "GISCUS_CATEGORY_ID" }}
+{{- if and $repoId $categoryId }}
 <div class="comments">
     <script src="https://giscus.app/client.js"
         data-repo="{{ site.Params.giscus.repo }}"
-        data-repo-id="{{ site.Params.giscus.repoId }}"
+        data-repo-id="{{ $repoId }}"
         data-category="{{ site.Params.giscus.category }}"
-        data-category-id="{{ site.Params.giscus.categoryId }}"
+        data-category-id="{{ $categoryId }}"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
@@ -16,4 +21,5 @@
         async>
     </script>
 </div>
+{{- end }}
 {{- end }}
