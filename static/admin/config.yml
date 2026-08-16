@@ -1,0 +1,132 @@
+# Decap CMS 配置：内容管理后台
+# 数据后端 = 本仓库（GitHub API），无服务器、无数据库
+backend:
+  name: github
+  repo: Rain-edge/rain-edge.github.io
+  branch: main
+
+media_folder: static/uploads
+public_folder: /uploads
+
+locale: zh_Hans
+
+# 通用 front matter 字段（TOML 格式，与 Hugo 现有文件一致）
+collections:
+  - name: posts
+    label: 文章
+    label_singular: 文章
+    folder: content/posts
+    create: true
+    format: toml
+    slug: "{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "简介（分享卡片用）", name: "description", widget: "string", required: false }
+      - { label: "日期", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss+08:00" }
+      - { label: "标签", name: "tags", widget: "list", required: false }
+      - { label: "草稿", name: "draft", widget: "boolean", default: false, required: false }
+      - { label: "正文", name: "body", widget: "markdown" }
+
+  - name: tech
+    label: 技术
+    label_singular: 技术文章
+    folder: content/tech
+    create: true
+    format: toml
+    slug: "{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "简介（分享卡片用）", name: "description", widget: "string", required: false }
+      - { label: "日期", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss+08:00" }
+      - { label: "标签", name: "tags", widget: "list", required: false }
+      - { label: "草稿", name: "draft", widget: "boolean", default: false, required: false }
+      - { label: "正文", name: "body", widget: "markdown" }
+
+  - name: notes
+    label: 笔记
+    label_singular: 笔记
+    folder: content/notes
+    create: true
+    format: toml
+    slug: "{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "简介（分享卡片用）", name: "description", widget: "string", required: false }
+      - { label: "日期", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss+08:00" }
+      - { label: "标签", name: "tags", widget: "list", required: false }
+      - { label: "草稿", name: "draft", widget: "boolean", default: false, required: false }
+      - { label: "正文", name: "body", widget: "markdown" }
+
+  - name: life
+    label: 生活
+    label_singular: 生活记录
+    folder: content/life
+    create: true
+    format: toml
+    slug: "{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "简介（分享卡片用）", name: "description", widget: "string", required: false }
+      - { label: "日期", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss+08:00" }
+      - { label: "标签", name: "tags", widget: "list", required: false }
+      - { label: "草稿", name: "draft", widget: "boolean", default: false, required: false }
+      - { label: "正文", name: "body", widget: "markdown" }
+
+  - name: thoughts
+    label: 思考
+    label_singular: 思考
+    folder: content/thoughts
+    create: true
+    format: toml
+    slug: "{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "简介（分享卡片用）", name: "description", widget: "string", required: false }
+      - { label: "日期", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss+08:00" }
+      - { label: "标签", name: "tags", widget: "list", required: false }
+      - { label: "草稿", name: "draft", widget: "boolean", default: false, required: false }
+      - { label: "正文", name: "body", widget: "markdown" }
+
+  - name: moments
+    label: 瞬间
+    label_singular: 瞬间
+    folder: content/moments
+    create: true
+    format: toml
+    slug: "{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "日期", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss+08:00" }
+      - { label: "地点（可选）", name: "place", widget: "string", required: false }
+      - { label: "图片（可选，1-N 张，文件名）", name: "images", widget: "list", required: false }
+      - { label: "标签", name: "tags", widget: "list", required: false }
+      - { label: "草稿", name: "draft", widget: "boolean", default: false, required: false }
+      - { label: "正文（一句话到几行）", name: "body", widget: "markdown" }
+
+  - name: projects
+    label: 项目
+    label_singular: 项目
+    folder: content/projects
+    create: true
+    format: toml
+    slug: "{{slug}}"
+    fields:
+      - { label: "项目名称", name: "title", widget: "string" }
+      - { label: "简短介绍", name: "description", widget: "string" }
+      - { label: "日期（排序用）", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss+08:00" }
+      - { label: "封面（static/projects/ 下文件名）", name: "cover", widget: "string", required: false }
+      - { label: "截图（文件名列表）", name: "screenshots", widget: "list", required: false }
+      - { label: "技术栈", name: "stack", widget: "list" }
+      - { label: "状态", name: "status", widget: "string" }
+      - { label: "开始时间", name: "started", widget: "string" }
+      - { label: "GitHub 链接", name: "github", widget: "string", required: false }
+      - { label: "Live Demo 链接", name: "demo", widget: "string", required: false }
+      - { label: "项目背景", name: "background", widget: "text", required: false }
+      - { label: "为什么做", name: "why", widget: "text", required: false }
+      - { label: "功能（列表）", name: "features", widget: "list", required: false }
+      - { label: "开发过程", name: "process", widget: "text", required: false }
+      - { label: "技术难点", name: "challenges", widget: "text", required: false }
+      - { label: "遇到的问题", name: "problems", widget: "text", required: false }
+      - { label: "Future Plans", name: "future", widget: "text", required: false }
+      - { label: "草稿", name: "draft", widget: "boolean", default: false, required: false }
+      - { label: "正文（可选摘要）", name: "body", widget: "markdown", required: false }
