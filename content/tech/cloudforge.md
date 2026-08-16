@@ -1,5 +1,6 @@
 +++
 title = 'CloudForge：我的云原生运维平台'
+description = '介绍 CloudForge 云原生运维平台的技术栈与踩坑记录'
 date = 2026-08-10T20:00:00+08:00
 draft = false
 tags = ['Kubernetes', 'Docker', 'CI/CD']

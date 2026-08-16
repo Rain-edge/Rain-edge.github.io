@@ -1,5 +1,6 @@
 +++
 title = '周末去了趟图书馆'
+description = '周末图书馆日常记录'
 date = 2026-08-12T20:00:00+08:00
 draft = false
 tags = ['日常']

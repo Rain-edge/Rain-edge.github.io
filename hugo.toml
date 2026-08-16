@@ -11,6 +11,10 @@ theme = 'PaperMod'
 enableRobotsTXT = true
 hasCJKLanguage = true
 
+# Hugo 0.160 默认 home 输出不含 robots，显式声明以生成 robots.txt
+[outputs]
+  home = ['html', 'rss', 'robots']
+
 # 顶部导航
 [menu]
 [[menu.main]]
@@ -66,7 +70,7 @@ hasCJKLanguage = true
 
 [params]
   author = 'Rain-edge'
-  description = '云计算 / DevOps / SRE 学习笔记'
+  description = '云计算 · DevOps · SRE · 日常'
   ShowReadingTime = true
   ShowWordCount = true
   ShowShareButtons = false

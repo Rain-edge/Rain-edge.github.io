@@ -1,5 +1,6 @@
 +++
 title = 'Kubernetes 学习笔记：从 Pod 到 Service'
+description = '从 Pod 到 Service：Kubernetes 基础学习笔记'
 date = 2026-08-11T20:00:00+08:00
 draft = false
 tags = ['Kubernetes', '笔记']

@@ -1,5 +1,6 @@
 +++
 title = '关于「个人数字空间」的思考'
+description = '关于个人数字空间的思考'
 date = 2026-08-13T20:00:00+08:00
 draft = false
 tags = ['思考']
