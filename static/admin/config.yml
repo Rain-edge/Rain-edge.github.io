@@ -4,7 +4,7 @@ backend:
   name: github
   repo: Rain-edge/rain-edge.github.io
   branch: main
-  base_url: https://githubio-orpin.vercel.app
+  base_url: https://netlify-cms-oauth-lovat.vercel.app
 
 media_folder: static/uploads
 public_folder: /uploads
