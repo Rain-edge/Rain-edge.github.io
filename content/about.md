@@ -1,12 +1,20 @@
-+++
-title = '关于'
-date = 2026-08-16
-draft = false
-layout = 'about'
-github = 'https://github.com/Rain-edge'
-email = ''
-stack = ['Kubernetes', 'Docker', 'ArgoCD', 'Prometheus', 'Grafana', 'Loki', 'FastAPI', 'GitHub Actions']
-+++
+---
+title: 关于
+date: 2026-08-16
+draft: false
+layout: about
+github: https://github.com/Rain-edge
+email: ''
+stack:
+- Kubernetes
+- Docker
+- ArgoCD
+- Prometheus
+- Grafana
+- Loki
+- FastAPI
+- GitHub Actions
+---
 
 ## 我是谁
 

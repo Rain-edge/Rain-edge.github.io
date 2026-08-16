@@ -1,7 +1,7 @@
-+++
-title = '文章'
-description = '全部文章'
+---
+title: 文章
+description: 全部文章
+cascade:
+  comments: true
+---
 
-[cascade]
-  comments = true
-+++

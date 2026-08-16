@@ -1,10 +1,12 @@
-+++
-title = 'Kubernetes 学习笔记：从 Pod 到 Service'
-description = '从 Pod 到 Service：Kubernetes 基础学习笔记'
-date = 2026-08-11T20:00:00+08:00
-draft = false
-tags = ['Kubernetes', '笔记']
-+++
+---
+title: Kubernetes 学习笔记：从 Pod 到 Service
+description: 从 Pod 到 Service：Kubernetes 基础学习笔记
+date: 2026-08-11 20:00:00+08:00
+draft: false
+tags:
+- Kubernetes
+- 笔记
+---
 
 Pod 是 Kubernetes 最小的调度单元，一个 Pod 内的容器共享网络和存储命名空间。
 

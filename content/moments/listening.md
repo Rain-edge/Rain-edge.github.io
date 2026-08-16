@@ -1,9 +1,10 @@
-+++
-title = '循环了一天'
-date = 2026-08-14T22:10:00+08:00
-draft = false
-tags = ['音乐']
-+++
+---
+title: 循环了一天
+date: 2026-08-14 22:10:00+08:00
+draft: false
+tags:
+- 音乐
+---
 
 🎵 Currently listening
 
