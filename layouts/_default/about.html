@@ -1,0 +1,28 @@
+{{- define "main" }}
+<article class="about-page">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  {{- with .Params.stack }}
+  <div class="project-stack">
+    {{- range . }}
+    <span class="project-stack-item">{{ . }}</span>
+    {{- end }}
+  </div>
+  {{- end }}
+
+  <div class="project-links">
+    {{- with .Params.github }}
+    <a href="{{ . }}" class="home-btn" target="_blank" rel="noopener">GitHub</a>
+    {{- end }}
+    {{- with .Params.email }}
+    <a href="mailto:{{ . }}" class="home-btn">Email</a>
+    {{- end }}
+  </div>
+</article>
+{{- end }}
