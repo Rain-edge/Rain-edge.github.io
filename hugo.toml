@@ -59,7 +59,7 @@ hasCJKLanguage = true
 
 [params.homeInfoParams]
   Title = "Rain-edge"
-  Subtitle = "云计算 · DevOps · SRE 学习笔记"
+  Subtitle = "云计算 · DevOps · SRE · 日常"
 
 [params.fuseOpts]
   isCaseSensitive = false
