@@ -46,6 +46,13 @@ body {
     animation: char-pop-once 0.9s ease backwards;
 }
 
+/* 已播放过动画后：直接静态显示彩色文字 */
+.logo a .tc-static {
+    display: inline-block;
+    opacity: 1;
+    animation: none;
+}
+
 @keyframes char-pop-once {
     from {
         opacity: 0;

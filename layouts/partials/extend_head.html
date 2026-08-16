@@ -6,7 +6,10 @@
 <!-- 页面标题逐字浮现动画（与首页标题同款） -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+    // logo 动画只在本会话第一次播放（切换页面不重播）
+    var logoPlayed = sessionStorage.getItem('logo-played') === '1';
     document.querySelectorAll('.page-header h1, .post-title, .logo a').forEach(function (el) {
+        var isLogo = el.parentElement && el.parentElement.classList.contains('logo');
         [...el.childNodes].forEach(function (node) {
             if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
                 var wrap = document.createElement('span');
@@ -15,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 var total = text.length;
                 [...text].forEach(function (ch, i) {
                     var s = document.createElement('span');
-                    s.className = 'tc';
+                    s.className = (isLogo && logoPlayed) ? 'tc-static' : 'tc';
                     s.style.animationDelay = (i * 120) + 'ms';
                     // 每个字符唯一色相：均匀分布在整个冷色域（185=青 到 281=紫）
                     var hue = 185 + (i * 96 / Math.max(1, total - 1));
@@ -27,5 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+    if (document.querySelector('.logo a')) {
+        sessionStorage.setItem('logo-played', '1');
+    }
 });
 </script>
