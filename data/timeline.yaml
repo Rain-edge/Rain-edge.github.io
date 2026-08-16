@@ -1,0 +1,21 @@
+# Timeline 数据：按年份倒序排列
+# 增加事件 = 在对应年份下加一行 date/type/text，或新增年份块
+- year: 2026
+  events:
+    - date: '2026.08'
+      type: '网站'
+      text: '个人数字空间 rain-edge.github.io 上线（Hugo + PaperMod + GitHub Actions 自动部署）'
+    - date: '2026.08'
+      type: '网站'
+      text: 'GitHub 主页美化：贡献贪吃蛇、逐字动画自我介绍'
+    - date: '2026.08'
+      type: '项目'
+      text: '博客内容体系搭建：技术 / 笔记 / 生活 / 瞬间 / 项目 / 思考 六大板块'
+    - date: '2026.03'
+      type: '项目'
+      text: '启动 CloudForge：云原生运维平台（K8s + ArgoCD + 可观测性全家桶）'
+- year: 2025
+  events:
+    - date: '2025'
+      type: '学习'
+      text: '开始系统学习云计算与 DevOps 方向（Linux、Docker、Kubernetes）'

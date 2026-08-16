@@ -1,0 +1,26 @@
+{{- define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+</header>
+<div class="timeline">
+  {{- range sort hugo.Data.timeline "year" "desc" }}
+  <section class="timeline-year">
+    <h2 class="timeline-year-title">{{ .year }}</h2>
+    <div class="timeline-events">
+      {{- range .events }}
+      <div class="timeline-event">
+        <span class="timeline-dot"></span>
+        <div class="timeline-event-body">
+          <span class="timeline-event-date">{{ .date }}</span>
+          {{- with .type }}
+          <span class="timeline-event-type">{{ . }}</span>
+          {{- end }}
+          <p class="timeline-event-text">{{ .text }}</p>
+        </div>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+</div>
+{{- end }}

@@ -475,6 +475,69 @@ a {
 }
 
 /* ============================================================
+   Timeline 时间轴（细竖线 + 青色节点，复用现有设计变量）
+   ============================================================ */
+
+.timeline {
+    margin-top: 10px;
+}
+
+.timeline-year-title {
+    font-size: 22px;
+    font-weight: 650;
+    letter-spacing: -0.2px;
+    margin: 26px 0 12px;
+}
+
+.timeline-year:first-child .timeline-year-title {
+    margin-top: 4px;
+}
+
+.timeline-events {
+    border-left: 1px solid var(--border);
+    margin-left: 8px;
+    padding-left: 20px;
+}
+
+.timeline-event {
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -24.5px;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.timeline-event-date {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-right: 8px;
+    letter-spacing: 0.3px;
+}
+
+.timeline-event-type {
+    font-size: 11.5px;
+    color: var(--secondary);
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    padding: 1px 8px;
+}
+
+.timeline-event-text {
+    margin: 4px 0 0;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--content);
+}
+
+/* ============================================================
    页面标题区域：紧贴顶部导航（与右上角菜单视觉一体）
    ============================================================ */
 

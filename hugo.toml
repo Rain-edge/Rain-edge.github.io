@@ -63,6 +63,11 @@ hasCJKLanguage = true
   url = '/tags/'
   weight = 22
 [[menu.main]]
+  identifier = 'timeline'
+  name = '时间线'
+  url = '/timeline/'
+  weight = 23
+[[menu.main]]
   identifier = 'archives'
   name = '归档'
   url = '/archives/'

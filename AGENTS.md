@@ -66,3 +66,10 @@
 - 文件放 `content/projects/<名>.md`，封面/截图放 `static/projects/`，front matter 引用文件名
 - 字段：`title`、`description`、`date`（排序用）、`cover`、`screenshots`（数组）、`stack`（数组）、`status`、`started`、`github`、`demo`（可选，无则不放按钮）、`background`/`why`/`features`/`process`/`challenges`/`problems`/`future`（可选，缺省章节自动隐藏）
 - 新增项目 = 新增一个 md + 拖图，模板自动生成卡片和详情页
+
+## 九、Timeline 发布规范
+
+- 数据在 `data/timeline.yaml`，不写进任何模板
+- 结构：年份块（`year` + `events` 数组），每个事件：`date`（如 2026.08）、`type`（可选标签：网站/项目/学习/成长…）、`text`
+- 增加事件 = 在对应年份的 events 下加三行 YAML；页面自动按年份倒序渲染
+- 不要删除 `_hidden = true`（时间线页不进文章流）
