@@ -1,6 +1,6 @@
 +++
 title = '用 GitHub Actions 免费部署 Hugo 博客'
-date = 2026-08-16T12:00:00+08:00
+date = 2026-08-16T10:00:00+08:00
 draft = false
 tags = ['GitHub Actions', 'Hugo', 'CI/CD']
 +++
