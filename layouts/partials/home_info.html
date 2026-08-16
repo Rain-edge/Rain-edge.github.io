@@ -1,7 +1,12 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
     <header class="entry-header">
-        <h1 class="home-title">{{ .Title | markdownify }}</h1>
+        {{- $title := .Title }}
+        <h1 class="home-title">
+        {{- range $i, $ch := split $title "" }}
+            <span class="tc" style="animation-delay: {{ mul $i 120 }}ms; color: hsl({{ add 185 (mul $i 12) }}, 60%, 40%)">{{ $ch }}</span>
+        {{- end }}
+        </h1>
         {{- with .Subtitle }}
         <p class="home-subtitle">{{ . | markdownify }}</p>
         {{- end }}
