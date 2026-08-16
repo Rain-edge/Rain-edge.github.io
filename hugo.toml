@@ -11,9 +11,10 @@ theme = 'PaperMod'
 enableRobotsTXT = true
 hasCJKLanguage = true
 
-# Hugo 0.160 默认 home 输出不含 robots，显式声明以生成 robots.txt
+# Hugo 0.160 默认 home 输出不含 robots/json，显式声明
+# json = 站内搜索索引（Fuse.js）
 [outputs]
-  home = ['html', 'rss', 'robots']
+  home = ['html', 'rss', 'robots', 'json']
 
 # 顶部导航
 [menu]
