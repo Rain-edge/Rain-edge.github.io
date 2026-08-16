@@ -19,7 +19,6 @@ collections:
     folder: content/posts
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}"
-    slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "简介（分享卡片用）", name: "description", widget: "string", required: false }
@@ -34,7 +33,6 @@ collections:
     folder: content/tech
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}"
-    slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "简介（分享卡片用）", name: "description", widget: "string", required: false }
@@ -49,7 +47,6 @@ collections:
     folder: content/notes
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}"
-    slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "简介（分享卡片用）", name: "description", widget: "string", required: false }
@@ -64,7 +61,6 @@ collections:
     folder: content/life
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}"
-    slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "简介（分享卡片用）", name: "description", widget: "string", required: false }
@@ -79,7 +75,6 @@ collections:
     folder: content/thoughts
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}"
-    slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "简介（分享卡片用）", name: "description", widget: "string", required: false }
@@ -94,7 +89,6 @@ collections:
     folder: content/moments
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}"
-    slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "日期", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss+08:00" }
@@ -110,7 +104,6 @@ collections:
     folder: content/projects
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}"
-    slug: "{{slug}}"
     fields:
       - { label: "项目名称", name: "title", widget: "string" }
       - { label: "简短介绍", name: "description", widget: "string" }
