@@ -43,10 +43,15 @@ hasCJKLanguage = true
   url = '/life/'
   weight = 17
 [[menu.main]]
+  identifier = 'moments'
+  name = '瞬间'
+  url = '/moments/'
+  weight = 18
+[[menu.main]]
   identifier = 'thoughts'
   name = '思考'
   url = '/thoughts/'
-  weight = 18
+  weight = 19
 [[menu.main]]
   identifier = 'tags'
   name = '标签'

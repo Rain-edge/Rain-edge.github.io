@@ -229,6 +229,91 @@ a {
 }
 
 /* ============================================================
+   Moments 轻量日常流（视觉重量低于文章卡片：细分隔线、无外框）
+   ============================================================ */
+
+.moments-list {
+    margin-top: 6px;
+}
+
+.moment-item {
+    padding: 14px 0 18px;
+    border-bottom: 1px solid var(--border);
+}
+
+.moment-item:last-child {
+    border-bottom: none;
+}
+
+.moment-head {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.moment-date {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.3px;
+}
+
+.moment-place {
+    font-size: 12.5px;
+    color: var(--secondary);
+}
+
+.moment-content {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--content);
+}
+
+.moment-content p {
+    margin: 0;
+}
+
+.moment-images {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.moment-images img {
+    max-width: 100%;
+    height: auto;
+    max-height: 260px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.moment-images.multi img {
+    flex: 1 1 180px;
+    max-width: 48%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.moment-tags {
+    margin-top: 8px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.moment-tag {
+    font-size: 12.5px;
+    color: var(--secondary);
+    transition: color 0.2s ease;
+}
+
+.moment-tag:hover {
+    color: var(--accent);
+}
+
+/* ============================================================
    页面标题区域：紧贴顶部导航（与右上角菜单视觉一体）
    ============================================================ */
 

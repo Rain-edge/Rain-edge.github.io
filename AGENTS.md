@@ -50,3 +50,13 @@
 - 文章 front matter `date` 必须用**过去时间**，未来日期会被 Hugo 静默跳过不渲染
 - GitHub Pages HTML 有 10 分钟 CDN 缓存，用户验证效果需无痕窗口
 - Windows git-bash 下：长命令会被安全拦截（用脚本文件）；PowerShell 的 `$_` 会被 bash 转义破坏（用 .ps1 文件）
+- Hugo 0.160 默认 `home` 输出格式不含 robots——`[outputs] home = ['html','rss','robots']` 必须保留，否则 robots.txt 不生成
+
+## 七、Moments 发布规范（发布一条日常 = 拖图 + 5 行）
+
+- 文件放 `content/moments/<名>.md`，front matter 字段：
+  - `date`（必填，过去时间）、`draft`（发布删掉或 false）
+  - `place`（可选，地点）、`tags`（可选）、`images`（可选，1-N 张）
+- 图片放 `static/moments/`，front matter 只写文件名：`images = ['xxx.jpg']`
+- 正文一句话到几行均可，Markdown 语法正常支持
+- 列表页自动全显内容 + 图片，无需额外操作

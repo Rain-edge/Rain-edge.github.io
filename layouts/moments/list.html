@@ -1,0 +1,32 @@
+{{- define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+</header>
+<div class="moments-list">
+  {{- range .Pages }}
+  <article class="moment-item">
+    <div class="moment-head">
+      <span class="moment-date">{{ .Date.Format "2006.01.02" }}</span>
+      {{- with .Params.place }}
+      <span class="moment-place">{{ . }}</span>
+      {{- end }}
+    </div>
+    <div class="moment-content">{{ .Content }}</div>
+    {{- with .Params.images }}
+    <div class="moment-images{{ if gt (len .) 1 }} multi{{ end }}">
+      {{- range . }}
+      <img src="{{ printf "/moments/%s" . | relURL }}" alt="" loading="lazy" />
+      {{- end }}
+    </div>
+    {{- end }}
+    {{- with .Params.tags }}
+    <div class="moment-tags">
+      {{- range . }}
+      <a href="{{ "tags/" | absLangURL }}{{ . | urlize }}/" class="moment-tag">#{{ . }}</a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </article>
+  {{- end }}
+</div>
+{{- end }}
