@@ -1,0 +1,37 @@
+baseURL = 'https://rain-edge.github.io/'
+languageCode = 'zh-cn'
+title = "Rain-edge 的技术博客"
+theme = 'PaperMod'
+
+enableRobotsTXT = true
+hasCJKLanguage = true
+
+# 顶部导航
+[menu]
+[[menu.main]]
+  identifier = 'posts'
+  name = '文章'
+  url = '/posts/'
+  weight = 10
+[[menu.main]]
+  identifier = 'tags'
+  name = '标签'
+  url = '/tags/'
+  weight = 20
+[[menu.main]]
+  identifier = 'about'
+  name = '关于'
+  url = '/about/'
+  weight = 30
+
+[params]
+  author = 'Rain-edge'
+  description = '云计算 / DevOps / SRE 学习笔记'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  ShowFullTextinRSS = false
