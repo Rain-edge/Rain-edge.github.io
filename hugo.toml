@@ -88,6 +88,7 @@ hasCJKLanguage = true
   author = 'Rain-edge'
   mainSections = ['posts']
   description = '云计算 · DevOps · SRE · 日常'
+  images = ['og-default.png']
   ShowReadingTime = true
   ShowWordCount = true
   ShowShareButtons = false
