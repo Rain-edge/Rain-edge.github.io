@@ -24,6 +24,26 @@ hasCJKLanguage = true
   url = '/posts/'
   weight = 10
 [[menu.main]]
+  identifier = 'tech'
+  name = '技术'
+  url = '/tech/'
+  weight = 15
+[[menu.main]]
+  identifier = 'notes'
+  name = '笔记'
+  url = '/notes/'
+  weight = 16
+[[menu.main]]
+  identifier = 'life'
+  name = '生活'
+  url = '/life/'
+  weight = 17
+[[menu.main]]
+  identifier = 'thoughts'
+  name = '思考'
+  url = '/thoughts/'
+  weight = 18
+[[menu.main]]
   identifier = 'tags'
   name = '标签'
   url = '/tags/'
