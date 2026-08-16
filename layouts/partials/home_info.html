@@ -1,0 +1,17 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1 class="home-title">{{ .Title | markdownify }}</h1>
+        {{- with .Subtitle }}
+        <p class="home-subtitle">{{ . | markdownify }}</p>
+        {{- end }}
+    </header>
+    {{- with .Content }}
+    <div class="entry-content">{{ . | markdownify }}</div>
+    {{- end }}
+    <footer class="entry-footer home-links">
+        <a href="https://github.com/Rain-edge" class="home-btn" target="_blank" rel="noopener">GitHub</a>
+        <a href="{{ "posts/" | absLangURL }}" class="home-btn">全部文章</a>
+    </footer>
+</article>
+{{- end }}

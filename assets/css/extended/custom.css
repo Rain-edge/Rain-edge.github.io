@@ -39,7 +39,7 @@ body {
     font-weight: 600;
     letter-spacing: -0.3px;
     background: linear-gradient(90deg,
-            #6366f1, #8b5cf6, #ec4899, #f59e0b, #10b981, #0d9488, #6366f1);
+            #0d9488, #0ea5e9, #3b82f6, #6366f1, #8b5cf6, #0d9488);
     background-size: 300% auto;
     -webkit-background-clip: text;
     background-clip: text;
@@ -216,4 +216,69 @@ a {
 
 .dark .post-content blockquote {
     background: #181b1e;
+}
+
+/* ============================================================
+   首页欢迎区
+   ============================================================ */
+
+.home-info {
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    padding: 44px 24px 36px;
+    margin-bottom: 8px;
+}
+
+/* 大号冷色渐变流动标题 */
+.home-title {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin: 0;
+    background: linear-gradient(90deg,
+            #0d9488, #0ea5e9, #3b82f6, #6366f1, #8b5cf6, #0d9488);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: home-flow 10s linear infinite;
+}
+
+@keyframes home-flow {
+    to {
+        background-position: 300% center;
+    }
+}
+
+.home-subtitle {
+    color: var(--secondary);
+    font-size: 15.5px;
+    letter-spacing: 1px;
+    margin: 10px 0 0;
+}
+
+/* 入口按钮：细线 pill */
+.home-links {
+    justify-content: center;
+    margin-top: 22px;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 9999px;
+    border: 1px solid var(--border);
+    color: var(--primary);
+    font-size: 14px;
+    margin: 0 6px;
+    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.home-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-soft);
 }

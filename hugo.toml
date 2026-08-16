@@ -35,3 +35,7 @@ hasCJKLanguage = true
   ShowToc = true
   TocOpen = false
   ShowFullTextinRSS = false
+
+[params.homeInfoParams]
+  Title = "Rain-edge"
+  Subtitle = "云计算 · DevOps · SRE 学习笔记"
