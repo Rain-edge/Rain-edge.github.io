@@ -6,16 +6,20 @@
 <!-- 页面标题逐字浮现动画（与首页标题同款） -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.page-header h1, .post-title').forEach(function (el) {
+    document.querySelectorAll('.page-header h1, .post-title, .logo a').forEach(function (el) {
         [...el.childNodes].forEach(function (node) {
             if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
                 var wrap = document.createElement('span');
                 wrap.className = 'tc-wrap';
-                [...node.textContent].forEach(function (ch, i) {
+                var text = node.textContent;
+                var total = text.length;
+                [...text].forEach(function (ch, i) {
                     var s = document.createElement('span');
                     s.className = 'tc';
                     s.style.animationDelay = (i * 120) + 'ms';
-                    s.style.color = 'hsl(' + (185 + (i * 12) % 96) + ', 60%, 40%)';
+                    // 每个字符唯一色相：均匀分布在整个冷色域（185=青 到 281=紫）
+                    var hue = 185 + (i * 96 / Math.max(1, total - 1));
+                    s.style.color = 'hsl(' + hue.toFixed(1) + ', 60%, 40%)';
                     s.textContent = ch;
                     wrap.appendChild(s);
                 });

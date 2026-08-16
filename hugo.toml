@@ -1,6 +1,6 @@
 baseURL = 'https://rain-edge.github.io/'
 defaultContentLanguage = 'zh-cn'
-title = "Rain-edge 的技术博客"
+title = "Rain-edge 的博客"
 theme = 'PaperMod'
 
 [languages.zh-cn]

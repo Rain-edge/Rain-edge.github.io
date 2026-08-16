@@ -34,10 +34,27 @@ body {
     border-bottom: 1px solid var(--border);
 }
 
-/* ---------- 站点标题：简洁静态 ---------- */
+/* ---------- 站点标题：逐字浮现（一次性），每字符唯一冷色 ---------- */
 .logo a {
     font-weight: 600;
     letter-spacing: -0.3px;
+}
+
+.logo a .tc {
+    display: inline-block;
+    opacity: 0;
+    animation: char-pop-once 0.9s ease backwards;
+}
+
+@keyframes char-pop-once {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ---------- 卡片完全统一（对称） ---------- */
