@@ -19,6 +19,7 @@ collections:
     folder: content/posts
     create: true
     format: toml
+    extension: md
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
@@ -34,6 +35,7 @@ collections:
     folder: content/tech
     create: true
     format: toml
+    extension: md
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
@@ -49,6 +51,7 @@ collections:
     folder: content/notes
     create: true
     format: toml
+    extension: md
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
@@ -64,6 +67,7 @@ collections:
     folder: content/life
     create: true
     format: toml
+    extension: md
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
@@ -79,6 +83,7 @@ collections:
     folder: content/thoughts
     create: true
     format: toml
+    extension: md
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
@@ -94,6 +99,7 @@ collections:
     folder: content/moments
     create: true
     format: toml
+    extension: md
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
@@ -110,6 +116,7 @@ collections:
     folder: content/projects
     create: true
     format: toml
+    extension: md
     slug: "{{slug}}"
     fields:
       - { label: "项目名称", name: "title", widget: "string" }
