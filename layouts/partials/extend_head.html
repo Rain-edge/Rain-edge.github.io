@@ -2,3 +2,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- 页面标题逐字浮现动画（与首页标题同款） -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.page-header h1, .post-title').forEach(function (el) {
+        [...el.childNodes].forEach(function (node) {
+            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+                var frag = document.createDocumentFragment();
+                [...node.textContent].forEach(function (ch, i) {
+                    var s = document.createElement('span');
+                    s.className = 'tc';
+                    s.style.animationDelay = (i * 120) + 'ms';
+                    s.style.color = 'hsl(' + (185 + (i * 12) % 96) + ', 60%, 40%)';
+                    s.textContent = ch;
+                    frag.appendChild(s);
+                });
+                node.replaceWith(frag);
+            }
+        });
+    });
+});
+</script>
