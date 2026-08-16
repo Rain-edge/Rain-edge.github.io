@@ -14,6 +14,11 @@ hasCJKLanguage = true
 # 顶部导航
 [menu]
 [[menu.main]]
+  identifier = 'home'
+  name = '主页'
+  url = '/'
+  weight = 5
+[[menu.main]]
   identifier = 'posts'
   name = '文章'
   url = '/posts/'
