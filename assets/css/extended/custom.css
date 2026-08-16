@@ -34,24 +34,10 @@ body {
     border-bottom: 1px solid var(--border);
 }
 
-/* ---------- 动态变色 logo（柔和色系流动渐变） ---------- */
+/* ---------- 站点标题：简洁静态 ---------- */
 .logo a {
     font-weight: 600;
     letter-spacing: -0.3px;
-    background: linear-gradient(90deg,
-            #0d9488, #0ea5e9, #3b82f6, #6366f1, #8b5cf6, #0d9488);
-    background-size: 300% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    animation: logo-flow 8s linear infinite;
-}
-
-@keyframes logo-flow {
-    to {
-        background-position: 300% center;
-    }
 }
 
 /* ---------- 卡片完全统一（对称） ---------- */
@@ -230,27 +216,14 @@ a {
     margin-bottom: 8px;
 }
 
-/* 大号冷色渐变流动标题 */
+/* 首页大标题：简洁静态 */
 .home-title {
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 700;
-    letter-spacing: -1px;
+    letter-spacing: -0.8px;
     line-height: 1.2;
     margin: 0;
-    background: linear-gradient(90deg,
-            #0d9488, #0ea5e9, #3b82f6, #6366f1, #8b5cf6, #0d9488);
-    background-size: 300% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    animation: home-flow 10s linear infinite;
-}
-
-@keyframes home-flow {
-    to {
-        background-position: 300% center;
-    }
+    color: var(--primary);
 }
 
 .home-subtitle {

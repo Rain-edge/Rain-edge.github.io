@@ -1,7 +1,12 @@
 baseURL = 'https://rain-edge.github.io/'
-languageCode = 'zh-cn'
+defaultContentLanguage = 'zh-cn'
 title = "Rain-edge 的技术博客"
 theme = 'PaperMod'
+
+[languages.zh-cn]
+  languageCode = 'zh-cn'
+  languageName = '简体中文'
+  weight = 1
 
 enableRobotsTXT = true
 hasCJKLanguage = true
@@ -19,15 +24,26 @@ hasCJKLanguage = true
   url = '/tags/'
   weight = 20
 [[menu.main]]
+  identifier = 'archives'
+  name = '归档'
+  url = '/archives/'
+  weight = 30
+[[menu.main]]
+  identifier = 'search'
+  name = '搜索'
+  url = '/search/'
+  weight = 40
+[[menu.main]]
   identifier = 'about'
   name = '关于'
   url = '/about/'
-  weight = 30
+  weight = 50
 
 [params]
   author = 'Rain-edge'
   description = '云计算 / DevOps / SRE 学习笔记'
   ShowReadingTime = true
+  ShowWordCount = true
   ShowShareButtons = false
   ShowBreadCrumbs = true
   ShowPostNavLinks = true
@@ -39,3 +55,16 @@ hasCJKLanguage = true
 [params.homeInfoParams]
   Title = "Rain-edge"
   Subtitle = "云计算 · DevOps · SRE 学习笔记"
+
+[params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  keys = ["title", "content"]
+
+# 评论区（Giscus）：默认关闭。在 giscus.app 配置后填入 repo-id 等并设 enabled = true
+[params.giscus]
+  enabled = false
+  repo = "Rain-edge/rain-edge.github.io"
+  repoId = ""
+  category = "General"
+  categoryId = ""
